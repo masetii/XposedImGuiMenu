@@ -6,7 +6,10 @@ float some_method(void* instance) {
     if (!instance)
         return old_some_method(instance);
 
-    return 7.0f;
+    if (some_feature)
+        some_pointer(7.0f); // declared on Pointers.h
+
+    return 3.0f;
 }
 
 void Hooks() {
