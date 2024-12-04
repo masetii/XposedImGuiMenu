@@ -15,6 +15,7 @@ import de.robv.android.xposed.XposedHelpers;
 public class Inject implements IXposedHookZygoteInit  {
     boolean loaded = false;
     String app_name = "com.app.here"; // EDIT THIS BEFORE COMPILING
+    String target_abi = Build.SUPPORTED_ABIS[0]; // SET THIS TO THE ABI YOU'RE TARGETING
     public static InputStream resourceStream(String name) {
         return Objects.requireNonNull(Inject.class.getClassLoader()).getResourceAsStream(name);
     }
@@ -35,7 +36,7 @@ public class Inject implements IXposedHookZygoteInit  {
                         File soFile = new File(pathname);
 
                         // NOTE: The ABI set is the preferred one, but it might not be the one that the app uses
-                        InputStream soFileStream = resourceStream("lib/" + Build.SUPPORTED_ABIS[0] + "/libxposedmenu.so");
+                        InputStream soFileStream = resourceStream("lib/" + target_abi + "/libxposedmenu.so");
 
                         byte[] soFileContent = new byte[soFileStream.available()];
                         soFileStream.read(soFileContent);
