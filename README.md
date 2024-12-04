@@ -14,4 +14,4 @@ This menu implements ImGui, libcURL, openSSL, KittyMemory, Dobby and Keystone.
 
 Remember to change the app package name inside the [Inject.java](https://github.com/fedes1to/XposedImGuiMenu/blob/master/app/src/main/java/org/modfs/xposedmenu/Inject.java) file.
 
-If you want to keep your menu safe from cracking we recommend [Hikari](https://github.com/61bcdefg/Hikari-LLVM15) and header string encryption ([obfusheader](https://github.com/ac3ss0r/obfusheader.h) or [skCrypter](https://github.com/skadro-official/skCrypter) work well)
+If you want to keep your menu safe from cracking we recommend [Hikari](https://github.com/61bcdefg/Hikari-LLVM15) and header string encryption ([obfusheader](https://github.com/ac3ss0r/obfusheader.h) or [skCrypter](https://github.com/skadro-official/skCrypter) work well).
