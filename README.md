@@ -1,6 +1,6 @@
 # Xposed ImGui Menu
 
-Uses Xposed's ZygoteInit function to inject the menu at runtime.
+Uses Xposed's ZygoteInit function to inject the menu at runtime **on unity games**.
 
 This module works with **[LSPatch](https://github.com/JingMatrix/LSPatch)**, this way you can have stealthy no root injection.
 
