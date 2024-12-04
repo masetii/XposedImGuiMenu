@@ -40,9 +40,6 @@ void *hack_thread(void *) {
         g_il2cppBaseMap = KittyMemory::getElfBaseMap("libil2cpp.so");
     } while (!g_il2cppBaseMap.isValid());
 
-    libLength = g_il2cppBaseMap.length;
-    startAddr = g_il2cppBaseMap.startAddress;
-
     // input native function
     RegisterNativeFn injecteventptr = KittyScanner::findRegisterNativeFn(unityMaps, "nativeInjectEvent");
 

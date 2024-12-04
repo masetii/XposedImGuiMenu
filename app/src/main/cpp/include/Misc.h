@@ -21,8 +21,6 @@ std::string user, pass;
 
 int glHeight, glWidth;
 
-uintptr_t startAddr, libLength;
-
 // Patching a offset with switch.
 void patchOffset(uint64_t offset, std::string hexBytes, bool isOn) {
 
