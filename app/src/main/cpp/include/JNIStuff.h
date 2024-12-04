@@ -25,7 +25,7 @@ void displayKeyboard() {
     jobject InputManObj = env->CallObjectMethod(context, mid, (jstring) env->GetStaticObjectField(ctx, fid));
     jclass ClassInputMethodManager = env->FindClass("android/view/inputmethod/InputMethodManager");
     jmethodID toggleSoftInputId = env->GetMethodID(ClassInputMethodManager, "toggleSoftInput", "(II)V");
-    env->CallVoidMethod(InputManObj, toggleSoftInputId, 0, 2);
+    env->CallVoidMethod(InputManObj, toggleSoftInputId, 0, 2); // if it doesn't work try different values for the last 2 ints
 }
 
 jmethodID MotionEvent_getX;
