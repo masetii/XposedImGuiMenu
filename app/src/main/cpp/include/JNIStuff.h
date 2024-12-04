@@ -36,7 +36,7 @@ jmethodID KeyEvent_getMetaState;
 jmethodID KeyEvent_getAction;
 jmethodID KeyEvent_getKeyCode;
 
-jboolean old_nativeInjectEvent(JNIEnv *env, jobject thiz, jobject inputEvent);
+jboolean (*old_nativeInjectEvent)(...);
 jboolean nativeInjectEvent(JNIEnv *env, jobject thiz, jobject inputEvent)
 {
     if (init)

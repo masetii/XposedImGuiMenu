@@ -1,7 +1,7 @@
 #pragma once
 
 // Simple hook example
-float old_some_method(void* instance);
+float (*old_some_method)(...);
 float some_method(void* instance) {
     if (!instance)
         return old_some_method(instance);

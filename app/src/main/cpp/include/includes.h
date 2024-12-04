@@ -45,7 +45,7 @@
 #include "Misc.h"
 #include "JNIStuff.h"
 #include "ptr.h"
-#include "Features.h"
+#include "GameValues.h"
 #include "Pointers.h"
 #include "Patches.h"
 #include "Hooks.h"
