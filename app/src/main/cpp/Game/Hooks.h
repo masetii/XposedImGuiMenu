@@ -10,7 +10,7 @@ float some_method(void* instance) {
         some_pointer(7.0f); // declared on Pointers.h
 
     // get/set field examples
-    GetField<int>(instance, 0x10) = 99; // Set int field 0x10 at 99
+    GetField<int>(instance, 0x10) = 99; // Set int field 0x10 to 99
     float fieldValue = GetField<float>(instance, 0x48); // Get float field 0x10
 
     return fieldValue;
