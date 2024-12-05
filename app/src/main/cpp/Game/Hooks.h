@@ -11,7 +11,7 @@ float some_method(void* instance) {
 
     // get/set field examples
     GetField<int>(instance, 0x10) = 99; // Set int field 0x10 to 99
-    float fieldValue = GetField<float>(instance, 0x48); // Get float field 0x10
+    float fieldValue = GetField<float>(instance, 0x48); // Get float field 0x48
 
     return fieldValue;
 }
