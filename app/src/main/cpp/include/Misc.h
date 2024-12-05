@@ -65,6 +65,11 @@ uintptr_t string2Offset(const char *c) {
     return strtoull(c, nullptr, base);
 }
 
+// Easy way to get a field from an instance
+template<typename T> inline T &GetField(void *instance, uint64_t offset) {
+    return (T &) (*(T *) ((uint64_t) instance + offset));
+}
+
 // Some useful macros to avoid typing too much
 #define HOOK(offset, ptr, orig) DobbyHook((void *)(g_il2cppBaseMap.startAddress + string2Offset(offset)), (void *)ptr, (void **)&orig)
 #define HOOKD(offset, func) DobbyHook((void *)(g_il2cppBaseMap.startAddress + string2Offset(offset)), (void *)func, (void **)&old_##func)

@@ -9,7 +9,11 @@ float some_method(void* instance) {
     if (some_feature)
         some_pointer(7.0f); // declared on Pointers.h
 
-    return 3.0f;
+    // get/set field examples
+    GetField<int>(instance, 0x10) = 99; // Set int field 0x10 at 99
+    float fieldValue = GetField<float>(instance, 0x48); // Get float field 0x10
+
+    return fieldValue;
 }
 
 void Hooks() {
