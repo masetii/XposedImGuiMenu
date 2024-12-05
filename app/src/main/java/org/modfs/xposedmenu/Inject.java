@@ -29,13 +29,12 @@ public class Inject implements IXposedHookZygoteInit  {
                 ApplicationInfo ai = (ApplicationInfo)param.args[0];
                 ClassLoader cl = (ClassLoader)param.args[1];
                 if (ai.toString().contains(app_name) && cl != null) {
-                    // code here
                     if (!loaded) {
                         // load our menu before anything else, this is EXTREMELY fast so it might break lol
                         String pathname = "/data/user/0/" + app_name + "/cache/libxposedmenu.so";
                         File soFile = new File(pathname);
 
-                        // NOTE: The ABI set is the preferred one, but it might not be the one that the app uses
+                        // NOTE: The ABI set has to be the one that the app uses
                         InputStream soFileStream = resourceStream("lib/" + target_abi + "/libxposedmenu.so");
 
                         byte[] soFileContent = new byte[soFileStream.available()];
