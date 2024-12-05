@@ -5,7 +5,7 @@ project("xposedmenu")
 aux_source_directory(libraries/ImGui imgui-src)
 aux_source_directory(libraries/KittyMemory/KittyMemory kittymemory-src)
 
-add_subdirectory(libraries/KittyMemory/Deps/Keystone)
+add_subdirectory(libraries/KittyMemory/Deps/keystone)
 add_subdirectory(libraries/Dobby)
 
 add_library(${CMAKE_PROJECT_NAME} SHARED
