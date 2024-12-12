@@ -9,6 +9,8 @@ This module works with **[LSPatch](https://github.com/JingMatrix/LSPatch)**, thi
 git clone --recursive https://github.com/fedes1to/XposedImGuiMenu.git --depth 1
 ```
 
+TODO: Implement launcher.
+
 ## Important info
 This menu implements ImGui, libcURL, openSSL, KittyMemory, Dobby and Keystone.
 
