@@ -7,3 +7,6 @@
 [submodule "app/src/main/cpp/libraries/Dobby"]
 	path = app/src/main/cpp/libraries/Dobby
 	url = https://github.com/chiteroman/Dobby.git
+[submodule "app/src/main/cpp/libraries/BNM-Android"]
+	path = app/src/main/cpp/libraries/BNM-Android
+	url = https://github.com/ByNameModding/BNM-Android

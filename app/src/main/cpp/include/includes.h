@@ -30,16 +30,19 @@
 #include <jni.h>
 #include <android/log.h>
 
-// Custom headers
-#include "dobby.h"
-#include "KittyInclude.hpp"
-#include "KittyMemory.hpp"
-#include "KittyScanner.hpp"
-#include "MemoryPatch.hpp"
-#include "imgui.h"
-#include "imgui_internal.h"
-#include "imgui_impl_opengl3.h"
-#include "imgui_impl_android.h"
+// Custom external headers
+#include <BNM/Loading.hpp>
+#include <dobby.h>
+#include <KittyInclude.hpp>
+#include <KittyMemory.hpp>
+#include <KittyScanner.hpp>
+#include <MemoryPatch.hpp>
+#include <imgui.h>
+#include <imgui_internal.h>
+#include <imgui_impl_opengl3.h>
+#include <imgui_impl_android.h>
+
+// Internal headers
 #include "input.h"
 #include "log.h"
 #include "Misc.h"

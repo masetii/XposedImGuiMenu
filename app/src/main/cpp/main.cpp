@@ -70,6 +70,8 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *reserved) {
     jvm = vm;
     vm->GetEnv((void **) &env, JNI_VERSION_1_6);
 
+    BNM::Loading::TryLoadByJNI(env); // BNM loading, comment this out if you don't use BNM
+
     UnityPlayer_cls = env->FindClass("com/unity3d/player/UnityPlayer");
     UnityPlayer_CurrentActivity_fid = env->GetStaticFieldID(UnityPlayer_cls, "currentActivity", "Landroid/app/Activity;");
 

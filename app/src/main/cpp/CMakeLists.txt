@@ -5,8 +5,10 @@ project("xposedmenu")
 aux_source_directory(libraries/ImGui imgui-src)
 aux_source_directory(libraries/KittyMemory/KittyMemory kittymemory-src)
 
-add_subdirectory(libraries/KittyMemory/Deps/keystone)
-add_subdirectory(libraries/Dobby)
+add_subdirectory(libraries/KittyMemory/Deps/keystone EXCLUDE_FROM_ALL)
+add_subdirectory(libraries/Dobby EXCLUDE_FROM_ALL)
+add_subdirectory(libraries/BNM-Android EXCLUDE_FROM_ALL)
+get_property(BNM_INCLUDE_DIRECTORIES TARGET BNM PROPERTY BNM_INCLUDE_DIRECTORIES)
 
 add_library(${CMAKE_PROJECT_NAME} SHARED
         ${imgui-src}
@@ -20,6 +22,7 @@ include_directories(
         Game
         libraries/ImGui
         libraries/ImGui/backends
+        ${BNM_INCLUDE_DIRECTORIES}
         libraries/KittyMemory/KittyMemory
         libraries/KittyMemory/Deps/Keystone/include
         libraries/Dobby/include
@@ -55,6 +58,7 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
         ${GLESV2_LIB}
         ${LZ_LIB}
         ${OPENGL_LIB}
+        BNM
         keystone
         dobby_static
         android
