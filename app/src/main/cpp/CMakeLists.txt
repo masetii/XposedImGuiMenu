@@ -10,12 +10,15 @@ add_subdirectory(libraries/Dobby EXCLUDE_FROM_ALL)
 add_subdirectory(libraries/BNM-Android EXCLUDE_FROM_ALL)
 get_property(BNM_INCLUDE_DIRECTORIES TARGET BNM PROPERTY BNM_INCLUDE_DIRECTORIES)
 
-add_library(${CMAKE_PROJECT_NAME} SHARED
+add_library(
+        ${CMAKE_PROJECT_NAME}
+        SHARED
         ${imgui-src}
         ${kittymemory-src}
         libraries/ImGui/backends/imgui_impl_opengl3.cpp
         libraries/ImGui/backends/imgui_impl_android.cpp
-        main.cpp)
+        main.cpp
+)
 
 include_directories(
         include
@@ -50,7 +53,8 @@ else ()
     set(OPENGL_LIB GLESv3)
 endif (${ANDROID_PLATFORM_LEVEL} LESS 12)
 
-target_link_libraries(${CMAKE_PROJECT_NAME}
+target_link_libraries(
+        ${CMAKE_PROJECT_NAME}
         ${CURL_LIB}
         ${OPENSSL_LIB}
         ${CRYPTO_LIB}
@@ -62,4 +66,5 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
         keystone
         dobby_static
         android
-        log)
+        log
+)

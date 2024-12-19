@@ -12,7 +12,7 @@ git clone --recursive https://github.com/fedes1to/XposedImGuiMenu.git --depth 1
 TODO: Implement launcher.
 
 ## Important info
-This menu implements ImGui, libcURL, openSSL, KittyMemory, Dobby and Keystone.
+This menu implements ImGui, libcURL, openSSL, KittyMemory, Dobby and Keystone, **it does NOT support Vulkan**.
 
 Remember to modify accordingly the [Inject.java](https://github.com/fedes1to/XposedImGuiMenu/blob/master/app/src/main/java/org/modfs/xposedmenu/Inject.java), [AndroidManifest.xml](https://github.com/fedes1to/XposedImGuiMenu/blob/master/app/src/main/AndroidManifest.xml), [build.gradle:app](https://github.com/fedes1to/XposedImGuiMenu/blob/master/app/build.gradle), GlobalSettings.hpp (BNM) and [log.h](https://github.com/fedes1to/XposedImGuiMenu/blob/master/app/src/main/cpp/include/log.h) files.
 
