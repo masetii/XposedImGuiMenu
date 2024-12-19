@@ -14,7 +14,7 @@ TODO: Implement launcher.
 ## Important info
 This menu implements ImGui, libcURL, openSSL, KittyMemory, Dobby and Keystone.
 
-Remember to modify accordingly the [Inject.java](https://github.com/fedes1to/XposedImGuiMenu/blob/master/app/src/main/java/org/modfs/xposedmenu/Inject.java), [AndroidManifest.xml](https://github.com/fedes1to/XposedImGuiMenu/blob/master/app/src/main/AndroidManifest.xml), [build.gradle:app](https://github.com/fedes1to/XposedImGuiMenu/blob/master/app/build.gradle), [GlobalSettings.hpp](https://github.com/fedes1to/XposedImGuiMenu/blob/master/app/src/main/cpp/libraries/BNM-Android/include/BNM/UserSettings/GlobalSettings.hpp) and [log.h](https://github.com/fedes1to/XposedImGuiMenu/blob/master/app/src/main/cpp/include/log.h) files.
+Remember to modify accordingly the [Inject.java](https://github.com/fedes1to/XposedImGuiMenu/blob/master/app/src/main/java/org/modfs/xposedmenu/Inject.java), [AndroidManifest.xml](https://github.com/fedes1to/XposedImGuiMenu/blob/master/app/src/main/AndroidManifest.xml), [build.gradle:app](https://github.com/fedes1to/XposedImGuiMenu/blob/master/app/build.gradle), GlobalSettings.hpp (BNM) and [log.h](https://github.com/fedes1to/XposedImGuiMenu/blob/master/app/src/main/cpp/include/log.h) files.
 
 If you want to keep your menu safe from cracking we recommend [Hikari](https://github.com/61bcdefg/Hikari-LLVM15) and header string encryption ([obfusheader](https://github.com/ac3ss0r/obfusheader.h) or [skCrypter](https://github.com/skadro-official/skCrypter) work well).
 
