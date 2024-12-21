@@ -1,6 +1,6 @@
 #include "includes.h"
 
-EGLBoolean (*old_eglSwapBuffers)(EGLDisplay dpy, EGLSurface surface);
+EGLBoolean (*old_eglSwapBuffers)(...);
 EGLBoolean hook_eglSwapBuffers(EGLDisplay dpy, EGLSurface surface) {
     eglQuerySurface(dpy, surface, EGL_WIDTH, &glWidth);
     eglQuerySurface(dpy, surface, EGL_HEIGHT, &glHeight);
@@ -46,10 +46,10 @@ void *hack_thread(void *) {
     } while (!unityMaps.isValid());
 
     // input native function
-    RegisterNativeFn injecteventptr = KittyScanner::findRegisterNativeFn(unityMaps, "nativeInjectEvent");
+    RegisterNativeFn nativeInjectEventFn = KittyScanner::findRegisterNativeFn(unityMaps, "nativeInjectEvent");
 
-    if (injecteventptr.isValid()) {
-        HOOKD_ABS(injecteventptr.fnPtr, nativeInjectEvent);
+    if (nativeInjectEventFn.isValid()) {
+        HOOKD_ABS(nativeInjectEventFn.fnPtr, nativeInjectEvent);
     } else {
         LOGE("InjectEventPtr is dead, menu unable to initialize.");
     }
