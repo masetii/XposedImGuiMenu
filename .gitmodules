@@ -5,8 +5,9 @@
 	path = app/src/main/cpp/libraries/ImGui
 	url = https://github.com/ocornut/imgui.git
 [submodule "app/src/main/cpp/libraries/Dobby"]
-	path = app/src/main/cpp/libraries/Dobby
-	url = https://github.com/JonathanSalwan/Dobby.git
+    path = app/src/main/cpp/libraries/Dobby
+    url = https://github.com/chiteroman/Dobby.git
+
 [submodule "app/src/main/cpp/libraries/BNM-Android"]
 	path = app/src/main/cpp/libraries/BNM-Android
 	url = https://github.com/ByNameModding/BNM-Android
